@@ -92,59 +92,7 @@ app.get("/status/:id", async (req, res) => {
 
 
 
-// GET /logs
-// app.get("/logs", async (req, res) => {
-//   try {
-//     const response = await axios.get(DRONE_LOG_URL);
-//     let data = response.data.items;
 
-//     let logs = data.map((item) => ({
-//       drone_id: item.drone_id,
-//       drone_name: item.drone_name,
-//       created: item.created,
-//       country: item.country,
-//       celsius: item.celsius,
-//     }));
-
-//     res.send(logs);
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//     res.status(500).send("Error fetching data");
-//   }
-// });
-
-
-// POST /logs
-// app.post("/logs", async (req, res) => {
-//   console.log(req.body); // ตรวจสอบข้อมูลที่ถูกส่งมา
-//   const { celsius, drone_id, drone_name, country } = req.body;
-
-//   if (!celsius || !drone_id || !drone_name || !country) {
-//     res.status(400).json({ error: 'Invalid input, please provide all fields.' });
-//   }
-//   // ประมวลผลข้อมูล log ที่ส่งมา (บันทึกลงฐานข้อมูลหรืออื่น ๆ)
-//   console.log(`Log received: ${drone_id}, ${drone_name}, ${celsius}, ${country}`);
-
-//   try {
-//     const { data } = await axios.post(
-//       { celsius, drone_id, drone_name, country },
-//       {
-//         celsius: celsius,
-//       },
-//       {
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       }
-//     );
-
-//     console.log("Insert complete");
-//     res.status(200).send("Insert complete");
-//   } catch (error) {
-//     console.error("Error: ", error.message);
-//     res.status(500).send("Error handling the data");
-//   }
-// });
 
 app.get('/logs', async (req, res) => {
   try {
