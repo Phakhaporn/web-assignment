@@ -1,0 +1,175 @@
+body {
+  /* font-family: Arial, sans-serif; */
+  margin: 0;
+  padding: 0px;
+  background-color: #9b86a7;
+  
+}
+
+
+
+.title-container{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #aa4761;
+}
+
+.menu-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+h1 {
+  color: #372d35;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #ffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  display: inline-block; /* ทำให้เมนูแสดงแบบบล็อคในแนวกลาง */
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 100px 20px;
+  background-color: #c58897;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #ccc;
+}
+
+
+
+
+nav a {
+  font-size: 1.2rem;
+  color: #4D3917;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: #333;
+}
+
+form {
+  margin: 20px 0;
+}
+
+
+
+/* logs table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #eee7f7;
+  color: #372d35;
+}
+
+table, th, td {
+  border: 2px solid #746885;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #372d35;
+  color: white;
+}
+
+/*  Back , Next */
+button {
+  background-color: #c58997;
+  color: #372d35;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #aa4761;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #CED4DA; /* Light gray border */
+  border-radius: 5px;
+  width: calc(100% - 22px); /* Adjust for padding */
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.page { display: none; }
+/* Additional styles here */
+
+.container {
+  display: flex;
+  justify-content: center; /* จัดตรงกลางแนวนอน */
+  min-height: 10vh; /* ตั้งความสูงเต็มหน้าจอ */
+}
+
+.card {
+  background: #372d35; 
+  color: #ffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 70px 0;
+  max-width: 500px; /* Limit card width */
+  transition: box-shadow 0.3s ease;
+  
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffff; /* Success color */
+}
+

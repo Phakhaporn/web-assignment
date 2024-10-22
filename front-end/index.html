@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRONE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <nav>
+        <div class="title-container">
+          <h1>DRONE</h1></div>
+          <div class="menu-container">
+          <ul>
+            <li><a href="#" onclick="showPage('viewconf')">View Config</a></li>
+            <li><a href="#" onclick="showPage('templog')">Temperature Log Form</a></li>
+            <li><a href="#" onclick="showPage('viewlog')">View Logs</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- viewconf page -->
+    <div id = "viewconf" class="page"><div class="container">
+        <div class="card"><h2>view configs</h2>
+        <form action ="">
+            <label for="droneId">Enter Drone ID:</label>
+            <input type="number" id="droneId" placeholder="Drone ID" required>
+            <button id="viewconfbtn">View Config</button>
+            <div id="confResult" class="result"></div>
+        </form> 
+        </div></div>
+    </div>
+
+    <!-- templog page -->
+    <section id="templog" class="page" style="display: none;">
+        <div class="container">
+        <form id="templog-form" class="card"><h2>Add your data</h2>
+            <input type="number" id="drone_id" placeholder="Drone ID" required />
+            <input type="text" id="drone_name" placeholder="Drone Name" required />
+            <input type="number" id="celsius" placeholder="Temperature (Celsius)" required />
+            <input type="text" id="country" placeholder="Country" required />
+            <button type="submit">Submit</button>
+        </form></div>
+        <script>
+            document.getElementById('templog-form').addEventListener('submit', submitTemperatureLog);
+        </script>
+    </section>
+
+    <!-- viewlog page -->
+    <section id ="viewlog" class="page" style="display: none;">
+        <h2>Drone Logs</h2>
+        <table id="logs-table">
+            <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Country</th>
+                    <th>Drone ID</th>
+                    <th>Drone Name</th>
+                    <th>Celsius</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- data from logs -->
+            </tbody>
+        </table>
+        <div class = "page-control">
+            <button id="prevPage" disabled>Back</button>
+            <span id="currentPage">Page 1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </section>
+    <tbody></tbody>
+
+
+
+</body>
+</html>
