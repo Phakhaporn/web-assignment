@@ -3,12 +3,12 @@ const axios = require('axios');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-
+const bodyParser = require('body-parser');
 
 app.use(express.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'front-end')));
-
+app.use(bodyParser.json());
 
 const DRONE_CONFIG_URL = ' https://script.google.com/macros/s/AKfycbzwclqJRodyVjzYyY-NTQDb9cWG6Hoc5vGAABVtr5-jPA_ET_2IasrAJK4aeo5XoONiaA/exec';
 const DRONE_LOG_URL = 'https://app-tracking.pockethost.io/api/collections/drone_logs/records';
