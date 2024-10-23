@@ -1,5 +1,5 @@
 // const API_HOST = "http://localhost:3000";
-const API_HOST = "https://web-assignment-dev.onrender.com";
+const API_HOST = window.API_HOST || "https://web-assignment-dev.onrender.com";
 let currentPage = 1;
 const pageSize = 20;
 
