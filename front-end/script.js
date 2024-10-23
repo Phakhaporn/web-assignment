@@ -64,7 +64,7 @@ async function submitTemperatureLog(event) {
     };
 
     try {
-        const response = await fetch((`${API_HOST}/logs`, {
+        const response = await fetch((`https://web-assignment-dev.onrender.com/logs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
