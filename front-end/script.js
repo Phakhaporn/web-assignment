@@ -64,7 +64,7 @@ async function submitTemperatureLog(event) {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/logs', {
+        const response = await fetch((`${API_HOST}/logs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
